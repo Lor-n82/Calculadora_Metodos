@@ -21,7 +21,7 @@ public class Calculadora_metodos {
     public static void main(String[] args) {
 
         int opcion;
-        float n1 = 0, n2 = 0;
+        float n1=0, n2=0;
         do {
             System.out.println("*****************");
             System.out.println("Calculadora");
@@ -41,8 +41,25 @@ public class Calculadora_metodos {
                 case 1:
                     suma(n1, n2);
                     System.out.println("La suma es " + n1 + n2);
-                    ;
-                    break;
+                    ;break;
+                case 2:
+                    suma(n1, n2);
+                    System.out.println("La suma es " + (n1 - n2));
+                    ;break;
+                case 3:
+                    suma(n1, n2);
+                    System.out.println("La suma es " + (n1 * n2));
+                    ;break;
+                case 4:
+                    suma(n1, n2);
+                    System.out.println("La suma es " + (n1 / n2));
+                    ;break;
+                case 5:
+                    System.out.println("Fin");
+                    ;break;
+                default:
+                    System.out.println("Opcion no valida");
+                    ;break;
             }
 
         } while (opcion != 5);
@@ -52,7 +69,7 @@ public class Calculadora_metodos {
 
         System.out.println("Introduce el primer numero ");
         n1 = tc.nextFloat();
-        System.out.println("Introduce el primer numero ");
+        System.out.println("Introduce el segundo numero ");
         n2 = tc.nextFloat();
         return (n1 + n2);
     }
@@ -61,7 +78,7 @@ public class Calculadora_metodos {
 
         System.out.println("Introduce el primer numero ");
         n1 = tc.nextFloat();
-        System.out.println("Introduce el primer numero ");
+        System.out.println("Introduce el segundo numero ");
         n2 = tc.nextFloat();
         return (n1 - n2);
     }
@@ -70,7 +87,7 @@ public class Calculadora_metodos {
 
         System.out.println("Introduce el primer numero ");
         n1 = tc.nextFloat();
-        System.out.println("Introduce el primer numero ");
+        System.out.println("Introduce el segundo numero ");
         n2 = tc.nextFloat();
         return (n1 * n2);
     }
@@ -79,8 +96,16 @@ public class Calculadora_metodos {
 
         System.out.println("Introduce el primer numero ");
         n1 = tc.nextFloat();
-        System.out.println("Introduce el primer numero ");
+        System.out.println("Introduce el segundo numero ");
         n2 = tc.nextFloat();
+        if (n2 == 0){
+            return -1;
+        }else{
         return (n1 / n2);
+        }
     }
+    
 }
+    
+    
+
