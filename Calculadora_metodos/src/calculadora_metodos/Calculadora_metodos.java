@@ -21,7 +21,7 @@ public class Calculadora_metodos {
     public static void main(String[] args) {
 
         int opcion;
-        float n1=0, n2=0;
+        double n1, n2;
         do {
             System.out.println("*****************");
             System.out.println("Calculadora");
@@ -32,80 +32,79 @@ public class Calculadora_metodos {
             System.out.println("4. División");
             System.out.println("5. Salir");
 
-            System.out.println("Introduce la opcion deseada ");
+            System.out.print("Introduce la opcion deseada: ");
             opcion = tc.nextInt();
 
             if (opcion > 0 && opcion < 5) {
             }
             switch (opcion) {
                 case 1:
-                    suma(n1, n2);
-                    System.out.println("La suma es " + n1 + n2);
-                    ;break;
+                    System.out.println("La suma es " + suma());
+                    ;
+                    break;
                 case 2:
-                    suma(n1, n2);
-                    System.out.println("La suma es " + (n1 - n2));
-                    ;break;
+                    System.out.println("La resta es " + resta());
+                    ;
+                    break;
                 case 3:
-                    suma(n1, n2);
-                    System.out.println("La suma es " + (n1 * n2));
-                    ;break;
+                    System.out.println("La multiplicacion es " + multiplicacion());
+                    ;
+                    break;
                 case 4:
-                    suma(n1, n2);
-                    System.out.println("La suma es " + (n1 / n2));
-                    ;break;
+                    System.out.println("La division es " + division());
+                    ;
+                    break;
                 case 5:
                     System.out.println("Fin");
-                    ;break;
+                    ;
+                    break;
                 default:
                     System.out.println("Opcion no valida");
-                    ;break;
+                    ;
+                    break;
             }
 
         } while (opcion != 5);
     }
 
-    public static float suma(float n1, float n2) {
-
-        System.out.println("Introduce el primer numero ");
-        n1 = tc.nextFloat();
-        System.out.println("Introduce el segundo numero ");
-        n2 = tc.nextFloat();
+    public static double suma() {
+        double n1, n2;
+        System.out.print("Introduce el primer numero ");
+        n1 = tc.nextDouble();
+        System.out.print("Introduce el segundo numero ");
+        n2 = tc.nextDouble();
         return (n1 + n2);
     }
 
-    public static float resta(float n1, float n2) {
-
-        System.out.println("Introduce el primer numero ");
+    public static double resta() {
+        double n1, n2;
+        System.out.print("Introduce el primer numero ");
         n1 = tc.nextFloat();
-        System.out.println("Introduce el segundo numero ");
+        System.out.print("Introduce el segundo numero ");
         n2 = tc.nextFloat();
         return (n1 - n2);
     }
 
-    public static float multiplicacion(float n1, float n2) {
-
-        System.out.println("Introduce el primer numero ");
+    public static double multiplicacion() {
+        double n1, n2;
+        System.out.print("Introduce el primer numero ");
         n1 = tc.nextFloat();
-        System.out.println("Introduce el segundo numero ");
+        System.out.print("Introduce el segundo numero ");
         n2 = tc.nextFloat();
         return (n1 * n2);
     }
 
-    public static float division(float n1, float n2) {
-
-        System.out.println("Introduce el primer numero ");
+    public static double division() {
+        double n1, n2;
+        System.out.print("Introduce el primer numero ");
         n1 = tc.nextFloat();
-        System.out.println("Introduce el segundo numero ");
+        System.out.print("Introduce el segundo numero ");
         n2 = tc.nextFloat();
-        if (n2 == 0){
+        if (n2 == 0) {
             return -1;
-        }else{
-        return (n1 / n2);
+        } else {
+            return (n1 / n2);
         }
     }
-    
-}
-    
-    
 
+}
